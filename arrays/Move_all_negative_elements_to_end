@@ -1,0 +1,22 @@
+class Solution {
+  public:
+    void segregateElements(vector<int>& arr) {
+        // Your code goes here
+        vector<int> neg,pos;
+        for(int i =0;i<arr.size();i++){
+            if(arr[i]<0){
+                neg.push_back(arr[i]);
+            }
+            else{
+                pos.push_back(arr[i]);
+            }
+        }
+        int i=0;
+        for(int j=0; j<pos.size(); j++){
+            arr[i++] = pos[j];
+        }
+        for(int j=0; j<neg.size(); j++){
+            arr[i++] = neg[j];
+        }
+    }
+};
